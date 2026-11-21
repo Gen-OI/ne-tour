@@ -1,0 +1,350 @@
+// Certified destinations (squares) and local picks (circles) for Offbeat Northeast
+// Note on coordinates: items with verify: true should be manually double-checked before hiking!
+
+export const CERTIFIED_DESTINATIONS = [
+  {
+    id: "cert-kisama",
+    name: "Kisama Heritage Village",
+    state: "Nagaland",
+    coords: [25.6035, 94.1132],
+    alt: 1450,
+    type: "certified",
+    verify: false,
+    tag: "Certified destination",
+    summary: "Permanent cultural village hosting 17 Naga indigenous tribes and traditional morungs.",
+    bestSeason: "October to April (Hornbill in Dec)"
+  },
+  {
+    id: "cert-kaziranga",
+    name: "Kaziranga Floodplains",
+    state: "Assam",
+    coords: [26.5775, 93.1711],
+    alt: 65,
+    type: "certified",
+    verify: false,
+    tag: "Certified destination",
+    summary: "UNESCO World Heritage sanctuary sheltering the greatest population of Indian one-horned rhinos.",
+    bestSeason: "November to April"
+  },
+  {
+    id: "cert-majuli",
+    name: "Majuli River Island",
+    state: "Assam",
+    coords: [26.9500, 94.2167],
+    alt: 85,
+    type: "certified",
+    verify: false,
+    tag: "Certified destination",
+    summary: "World's largest inhabited river island, cradle of Neo-Vaishnavite culture and monastery arts.",
+    bestSeason: "October to March"
+  },
+  {
+    id: "cert-cherrapunji",
+    name: "Sohra & Cherrapunji",
+    state: "Meghalaya",
+    coords: [25.2700, 91.7300],
+    alt: 1430,
+    type: "certified",
+    verify: false,
+    tag: "Certified destination",
+    summary: "Cloud-misted sandstone plateaus renowned for high rainfall, deep ravines and living root architecture.",
+    bestSeason: "September to April"
+  },
+  {
+    id: "cert-tawang",
+    name: "Tawang High Citadel",
+    state: "Arunachal Pradesh",
+    coords: [27.5861, 91.8594],
+    alt: 3048,
+    type: "certified",
+    verify: false,
+    tag: "Certified destination",
+    summary: "Ancient fortified monastery in the Eastern Himalayas overlooking the Tawang Chu river gorge.",
+    bestSeason: "April to October"
+  },
+  {
+    id: "cert-loktak",
+    name: "Loktak & Keibul Lamjao",
+    state: "Manipur",
+    coords: [24.5500, 93.8000],
+    alt: 768,
+    type: "certified",
+    verify: false,
+    tag: "Certified destination",
+    summary: "Floating lake ecosystem covered by circular organic phumdis and home to the endangered Sangai brow-antlered deer.",
+    bestSeason: "October to March"
+  }
+];
+
+export const LOCAL_PICKS = [
+  {
+    id: "pick-khonoma",
+    nearCertifiedId: "cert-kisama",
+    name: "Khonoma Green Village",
+    state: "Nagaland",
+    coords: [25.6510, 94.0205],
+    alt: 1520,
+    type: "pick",
+    status: "verified", // verified | awaiting
+    tag: "Verified by locals",
+    requiresGuide: false,
+    seasonal: false,
+    vouches: 38,
+    addedBy: "Kevisato Angami",
+    role: "Village Conservation Scout",
+    bestSeason: "October to April",
+    accessNote: "Shared sumos from Kohima South Gate (20 km); community gate fee ₹30.",
+    quote: "Walk through the terraced alder agro-forest where hunting was strictly banned three decades ago.",
+    excerpt: "Terraced paddies bordered by 200-year alder trees fixing soil nitrogen naturally.",
+    verify: false
+  },
+  {
+    id: "pick-dzukou",
+    nearCertifiedId: "cert-kisama",
+    name: "Dzukou Valley North Ridge",
+    state: "Nagaland",
+    coords: [25.5528, 94.0754],
+    alt: 2452,
+    type: "pick",
+    status: "verified",
+    tag: "Visit with a local guide",
+    requiresGuide: true,
+    seasonal: false,
+    vouches: 42,
+    addedBy: "Thepfuvilie",
+    role: "Trek Leader",
+    bestSeason: "June–Sept (lilies) or Nov (frost)",
+    accessNote: "Steep 4-hour ascent from Viswema or Zakhama trailheads. Sturdy boots and guide essential.",
+    quote: "Bypasses the crowded resthouse for wind-sculpted dwarf bamboo slopes and icy river meanders.",
+    excerpt: "Undulating dwarf bamboo valley that turns pink in monsoon and silver with frost in early winter.",
+    verify: true // marked for manual verification
+  },
+  {
+    id: "pick-panbari",
+    nearCertifiedId: "cert-kaziranga",
+    name: "Panbari Forest Fringe",
+    state: "Assam",
+    coords: [26.6210, 93.2840],
+    alt: 95,
+    type: "pick",
+    status: "verified",
+    tag: "Verified by locals",
+    requiresGuide: false,
+    seasonal: false,
+    vouches: 29,
+    addedBy: "Rupjyoti Saikia",
+    role: "Naturalist & Upcycling Artisan",
+    bestSeason: "November to March",
+    accessNote: "E-rickshaw from Kohora central gate (8 km). Best between 05:30 and 07:30 before mist lifts.",
+    quote: "Listen to the morning canopy chorus of Western Hoolock gibbons away from highway jeep queues.",
+    excerpt: "Semi-evergreen canopy corridor where wild elephants and canopy birds move outside the park core.",
+    verify: false
+  },
+  {
+    id: "pick-chamaguri",
+    nearCertifiedId: "cert-majuli",
+    name: "Chamaguri Satra Mask Workshop",
+    state: "Assam",
+    coords: [26.9620, 94.2850],
+    alt: 88,
+    type: "pick",
+    status: "verified",
+    tag: "Verified by locals",
+    requiresGuide: false,
+    seasonal: false,
+    vouches: 31,
+    addedBy: "Pradip Goswami",
+    role: "Traditional Mask Maker",
+    bestSeason: "October to February",
+    accessNote: "Cycle or hire a local cab from Kamalabari ghat (14 km). Visitors welcome in open studio.",
+    quote: "Watch pliable bamboo skeletons, clay, and cow dung shaped into mythical masks for Bhaona folk plays.",
+    excerpt: "Living heritage cloister where three generations teach the delicate craft of articulated bamboo masks.",
+    verify: false
+  },
+  {
+    id: "pick-mawryngkhang",
+    nearCertifiedId: "cert-cherrapunji",
+    name: "Mawryngkhang Bamboo Trail",
+    state: "Meghalaya",
+    coords: [25.2950, 91.8550],
+    alt: 1100,
+    type: "pick",
+    status: "verified",
+    tag: "Visit with a local guide",
+    requiresGuide: true,
+    seasonal: false,
+    vouches: 47,
+    addedBy: "Bantei Khongwir",
+    role: "Community Path Guide",
+    bestSeason: "November to February",
+    accessNote: "Wahkhen village trailhead. Requires calm balance across suspended single-bamboo ledges.",
+    quote: "A nerve-testing walkway anchored into sheer granite cliffs directly above roaring gorge streams.",
+    excerpt: "Handwoven bamboo suspension catwalk following the mythical rock-king legend of Wahkhen.",
+    verify: true // marked for manual verification
+  },
+  {
+    id: "pick-urgelling",
+    nearCertifiedId: "cert-tawang",
+    name: "Urgelling Sacred Grove",
+    state: "Arunachal Pradesh",
+    coords: [27.5680, 91.8800],
+    alt: 2980,
+    type: "pick",
+    status: "awaiting",
+    tag: "Awaiting verification",
+    requiresGuide: false,
+    seasonal: false,
+    vouches: 18,
+    addedBy: "Tenzin Norbu",
+    role: "Heritage Monk",
+    bestSeason: "April to October",
+    accessNote: "3 km downhill walking trail south of Tawang town center. Quiet, meditative grounds.",
+    quote: "Birthplace of the 6th Dalai Lama, sheltered under ancient weeping willows and silent prayer wheels.",
+    excerpt: "Quiet historic monastery surrounded by sacred centuries-old Himalayan cypress and willows.",
+    verify: false
+  },
+  {
+    id: "pick-karang",
+    nearCertifiedId: "cert-loktak",
+    name: "Karang Island Fisher Hamlet",
+    state: "Manipur",
+    coords: [24.5320, 93.8150],
+    alt: 772,
+    type: "pick",
+    status: "verified",
+    tag: "Seasonal",
+    requiresGuide: false,
+    seasonal: true,
+    vouches: 26,
+    addedBy: "Chaoba Meitei",
+    role: "Phumdi Fisherman",
+    bestSeason: "October to March",
+    accessNote: "Traditional wooden longboat from Sendra jetty (25 mins across calm phumdi water canals).",
+    quote: "Taste slow-smoked fresh fish prepared on floating reed huts while migratory waterfowls land.",
+    excerpt: "The first cashless island hamlet in the middle of Loktak lake, resting upon ancient floating vegetation.",
+    verify: false
+  },
+  {
+    id: "pick-nongriat",
+    nearCertifiedId: "cert-cherrapunji",
+    name: "Nongriat Blue Lagoon Pools",
+    state: "Meghalaya",
+    coords: [25.2505, 91.6720],
+    alt: 620,
+    type: "pick",
+    status: "verified",
+    tag: "Verified by locals",
+    requiresGuide: false,
+    seasonal: false,
+    vouches: 53,
+    addedBy: "Daphisha Syiem",
+    role: "Homestay Host",
+    bestSeason: "September to April",
+    accessNote: "Descend 3,500 stone stairs past Tyrna village and the Double Decker living root bridge.",
+    quote: "Crystal-clear turquoise river pools tucked beneath ancient Ficus elastica root canopies.",
+    excerpt: "Natural emerald swimming basins fed by living rainforest streams deep in the Umshiang canyon.",
+    verify: false
+  }
+];
+
+export const ALL_PLACES = [...CERTIFIED_DESTINATIONS, ...LOCAL_PICKS];
+
+// Featured Sample Route: Kisama -> Khonoma -> Dzukou Valley
+export const FEATURED_ROUTE = {
+  name: "Southern Angami Highlands Trail",
+  start: { name: "Kisama Heritage Village", alt: 1450, at: [0.18, 0.22] },
+  stages: [
+    {
+      to: "Khonoma Green Village",
+      km: 18.5,
+      gain: 420,
+      loss: 350,
+      hours: "4h 30m",
+      at: [0.38, 0.35],
+      badge: "Stage 1",
+      kind: "Eco-sanctuary & Terraces",
+      note: "Ascend past alder terraced slopes and the fortified semoma fort.",
+      localTip: "Try traditional smoked tea with dried wild persimmons at the community morung."
+    },
+    {
+      to: "Dzukou Valley North Ridge",
+      km: 14.2,
+      gain: 932,
+      loss: 110,
+      hours: "5h 15m",
+      at: [0.62, 0.58],
+      badge: "Stage 2",
+      kind: "Alpine Ridge & Dwarf Bamboo",
+      note: "Climb through mossy cloud forest into the vast treeless valley basin.",
+      localTip: "Fill water bottles at the crystal brook; stay strictly on stone path to protect rare lilies."
+    },
+    {
+      to: "Viswema Overlook & Kisama",
+      km: 12.0,
+      gain: 150,
+      loss: 1042,
+      hours: "3h 45m",
+      at: [0.82, 0.82],
+      badge: "Stage 3",
+      kind: "Descent & Heritage Return",
+      note: "Stone staircase descent through rhododendron thickets opening to Kohima panorama.",
+      localTip: "Catch sunset over the Barail range before returning to Kisama village."
+    }
+  ],
+  peaks: [
+    { name: "Mt. Japfu (3014m)", at: [0.52, 0.45] },
+    { name: "Barail Crest (2600m)", at: [0.72, 0.68] }
+  ]
+};
+
+// Illustrative Upcoming Local-led Walks (Sample content)
+export const LOCAL_WALKS = [
+  {
+    id: "walk-1",
+    place: "Khonoma Alder Sanctuary & Fort",
+    guide: "Kevisato Angami",
+    guideRole: "Conservation Elder",
+    date: "Dec 04, 2026",
+    days: "1 day",
+    difficulty: "Moderate",
+    placesLeft: 4,
+    maxGroup: 8,
+    summary: "Ancient terraced agriculture walk and indigenous bird monitoring."
+  },
+  {
+    id: "walk-2",
+    place: "Dzukou High Ridge Frost Crossing",
+    guide: "Thepfuvilie & Neituo",
+    guideRole: "High-ridge Guides",
+    date: "Dec 12, 2026",
+    days: "2 days / 1 night",
+    difficulty: "Strenuous",
+    placesLeft: 2,
+    maxGroup: 6,
+    summary: "Winter frost trek to the dwarf bamboo basin and frozen serpentine brooks."
+  },
+  {
+    id: "walk-3",
+    place: "Wahkhen Living Bamboo Catwalk",
+    guide: "Bantei Khongwir",
+    guideRole: "Wahkhen Wayfinder",
+    date: "Dec 18, 2026",
+    days: "1 day",
+    difficulty: "Challenging",
+    placesLeft: 3,
+    maxGroup: 6,
+    summary: "Cliffside bamboo suspension trek with traditional Khasi rock lore."
+  },
+  {
+    id: "walk-4",
+    place: "Chamaguri Mask Cloister & River Silt",
+    guide: "Pradip Goswami",
+    guideRole: "Satra Mask Artisan",
+    date: "Dec 22, 2026",
+    days: "Half day",
+    difficulty: "Easy",
+    placesLeft: 6,
+    maxGroup: 10,
+    summary: "Hands-on natural clay and bamboo mask sculpting workshop on Majuli."
+  }
+];

@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+:root {
+  --forest-900: #0f291e;
+  --forest-800: #1b4332;
+  --forest-700: #2d6a4f;
+  --forest-600: #40916c;
+  --forest-500: #52b788;
+  --forest-100: #d8f3dc;
+  
+  --cream-50: #fdfbf7;
+  --cream-100: #f7f4ed;
+  --cream-200: #ede8dc;
+  --cream-300: #dfd8c5;
+  --cream-900: #2b261d;
+  
+  --earth-accent: #c48b48;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--cream-50);
+  color: var(--cream-900);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Custom Forest Green Leaflet Map Marker */
+.forest-pin-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.forest-pin {
+  width: 28px;
+  height: 28px;
+  background: var(--forest-800);
+  border: 2.5px solid #ffffff;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  box-shadow: 0 4px 10px rgba(15, 41, 30, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.2s ease;
+  cursor: pointer;
+}
+
+.forest-pin-inner {
+  width: 9px;
+  height: 9px;
+  background: #ffffff;
+  border-radius: 50%;
+  transform: rotate(45deg);
+}
+
+.forest-pin-wrapper:hover .forest-pin {
+  transform: rotate(-45deg) scale(1.25);
+  background: var(--forest-700);
+}
+
+/* Active selected marker */
+.forest-pin-wrapper.active .forest-pin {
+  background: var(--earth-accent);
+  transform: rotate(-45deg) scale(1.3);
+}
+
+/* Mini picker pin in submission form */
+.picker-pin {
+  width: 22px;
+  height: 22px;
+  background: #c42d32;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+  animation: pulse-picker 1.8s infinite;
+}
+
+@keyframes pulse-picker {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(196, 45, 50, 0.7); }
+  70% { transform: scale(1.1); box-shadow: 0 0 0 10px rgba(196, 45, 50, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(196, 45, 50, 0); }
+}
+
+/* Leaflet Container Styling */
+.leaflet-container {
+  font-family: inherit !important;
+  background: var(--cream-100) !important;
+  z-index: 10 !important;
+}
+
+.leaflet-bar {
+  border: 1px solid var(--cream-300) !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08) !important;
+  border-radius: 6px !important;
+  overflow: hidden;
+}
+
+.leaflet-bar a {
+  background-color: #ffffff !important;
+  color: var(--forest-800) !important;
+  border-bottom: 1px solid var(--cream-200) !important;
+}
+
+.leaflet-bar a:hover {
+  background-color: var(--cream-100) !important;
+  color: var(--forest-700) !important;
+}
