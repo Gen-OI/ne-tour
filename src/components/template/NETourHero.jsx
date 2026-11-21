@@ -1,26 +1,57 @@
 import React from 'react';
 
-// Simple hero placeholder inspired by the Stone Bridge template
-// Uses the KxSans and KxSerif fonts defined in index.css
-
 export default function NETourHero({ onExplore, onAdd }) {
   return (
-    <section className="relative bg-forest-100 text-cream-100 py-20 text-center overflow-hidden">
-      <div className="max-w-4xl mx-auto">
-        <h1 className="text-5xl font-bold mb-4">Discover the Northeast Beyond the Ordinary.</h1>
-        <p className="text-xl mb-8">Hidden places, shared by the people who know them best.</p>
-        <div className="flex justify-center space-x-4">
+    <section
+      style={{ backgroundColor: 'var(--forest-800)', color: 'var(--cream-50)' }}
+      className="relative py-24 text-center overflow-hidden"
+    >
+      {/* Subtle background pattern */}
+      <div className="absolute inset-0 opacity-10 pointer-events-none"
+        style={{ backgroundImage: 'radial-gradient(circle at 20% 50%, var(--forest-500) 0%, transparent 60%), radial-gradient(circle at 80% 20%, var(--earth-accent) 0%, transparent 50%)' }}
+      />
+
+      <div className="relative max-w-4xl mx-auto px-6">
+        {/* Badge */}
+        <span
+          style={{ backgroundColor: 'var(--forest-600)', color: 'var(--cream-50)' }}
+          className="inline-block text-xs font-bold tracking-widest uppercase px-4 py-1.5 rounded-full mb-6"
+        >
+          Northeast India • 8 States • Hidden Gems
+        </span>
+
+        {/* Heading */}
+        <h1
+          style={{ color: 'var(--cream-50)' }}
+          className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-5 tracking-tight"
+        >
+          Discover the Northeast<br />
+          <span style={{ color: 'var(--forest-500)' }}>Beyond the Ordinary.</span>
+        </h1>
+
+        {/* Subheading */}
+        <p
+          style={{ color: 'var(--cream-200)' }}
+          className="text-lg sm:text-xl mb-10 max-w-2xl mx-auto leading-relaxed"
+        >
+          Hidden places, shared by the people who know them best.
+        </p>
+
+        {/* CTA Buttons */}
+        <div className="flex flex-col sm:flex-row justify-center gap-4">
           <button
             onClick={onExplore}
-            className="px-6 py-3 bg-cream-200 text-forest-800 font-semibold rounded hover:bg-cream-300 transition"
+            style={{ backgroundColor: 'var(--forest-500)', color: 'var(--forest-900)' }}
+            className="px-8 py-3.5 font-bold rounded-full text-sm tracking-wide hover:opacity-90 transition-opacity shadow-lg"
           >
-            Explore Hidden Places
+            🗺️ Explore Hidden Places
           </button>
           <button
             onClick={onAdd}
-            className="px-6 py-3 bg-forest-600 text-cream-100 font-semibold rounded hover:bg-forest-700 transition"
+            style={{ border: '2px solid var(--forest-500)', color: 'var(--cream-50)', backgroundColor: 'transparent' }}
+            className="px-8 py-3.5 font-bold rounded-full text-sm tracking-wide hover:opacity-80 transition-opacity"
           >
-            Share a Hidden Place
+            + Share a Hidden Place
           </button>
         </div>
       </div>

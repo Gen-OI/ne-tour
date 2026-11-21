@@ -1,4 +1,4 @@
-# Offbeat Northeast — Locals' Guide to Hidden Places
+# NE Tour — Discover the Northeast Beyond the Ordinary
 
 A responsive travel landing page and community map where locals recommend hidden places near famous certified destinations across Northeast India. Where the locals can upload the underrated images of places and Tourist could see and visit those places.
 
