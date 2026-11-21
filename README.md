@@ -1,8 +1,8 @@
 # Offbeat Northeast — Locals' Guide to Hidden Places
 
-A responsive travel landing page and community map where locals recommend hidden places near famous certified destinations across Northeast India.
+A responsive travel landing page and community map where locals recommend hidden places near famous certified destinations across Northeast India. Where the locals can upload the underrated images of places and Tourist could see and visit those places.
 
-Template design base: **Kamm Trek Landing** by **@kedhareswer (MIT)**.  
+
 MIT License details preserved in [LICENSE-template](file:///c:/Users/ASUS%20TUF%20GAMING%20A15/OneDrive/Desktop/NE%20Tour/LICENSE-template).
 
 ---
